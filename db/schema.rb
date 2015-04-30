@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429105745) do
+ActiveRecord::Schema.define(version: 20150430103136) do
 
   create_table "problems", force: :cascade do |t|
     t.integer  "user_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150429105745) do
     t.integer  "grade"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "password"
   end
 
 end
