@@ -1,0 +1,20 @@
+.col-md-12
+	%h1 Handboek voor leraren
+	%h3 Overzicht hoofdstukken
+= link_to 'hoofdstuk toevoegen', new_chapter_path, class: 'btn btn-primary' 
+.col-md-5
+	.panel.panel-primary
+		.panel-heading 
+			Alle hoofdstukken
+		%table.table.table-striped
+			%tr
+				%td ID
+				%td Naam
+				%td bewerken
+				%td verwijderen
+			- @chapter.each do |chapter|
+				%tr
+					%td= chapter.id
+					%td= chapter.chapter
+					%td= link_to 'Bewerken', edit_chapter_path(chapter), class: 'btn btn-warning'
+					%td= link_to 'Verwijderen', chapter_path(chapter), method: :delete, data: {confirm: 'Zeker weten?'}, class: 'btn btn-danger'
