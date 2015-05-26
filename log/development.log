@@ -3917,3 +3917,117 @@ Processing by QuestionsController#index as HTML
   [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions"
   Rendered questions/index.html.haml within layouts/application (39.0ms)
 Completed 200 OK in 2129ms (Views: 2088.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-26 10:12:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.haml within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 8071ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (TypeError: Deze eigenschap of methode wordt niet ondersteund door dit object):
+     5: 
+     6: 		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+     7: 
+     8: 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+     9:     
+    10: 		= csrf_meta_tags
+    11:   
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml___879313644_58900716'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (42.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (94.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-26 10:15:07 +0200
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-26 10:15:07 +0200
+
+
+Started GET "/assets/application.self-2950eaaa1babed48671044ca6e7a3580bb8936857fbd150f8d7c56c6acb0eaa6.css?body=1" for ::1 at 2015-05-26 10:15:07 +0200
+
+
+Started GET "/assets/chapters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-26 10:15:07 +0200
+
+
+Started GET "/chapters" for ::1 at 2015-05-26 10:15:10 +0200
+Processing by ChaptersController#index as HTML
+  [1m[35mChapter Load (1.0ms)[0m  SELECT "chapters".* FROM "chapters"
+  Rendered chapters/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 93ms (Views: 87.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-05-26 10:15:11 +0200
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-26 10:15:12 +0200
+Processing by ChaptersController#index as HTML
+  [1m[35mChapter Load (0.0ms)[0m  SELECT "chapters".* FROM "chapters"
+  Rendered chapters/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-05-26 10:15:12 +0200
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-05-26 10:15:36 +0200
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered questions/index.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 3546ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (TypeError: Deze eigenschap of methode wordt niet ondersteund door dit object):
+     5: 
+     6: 		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+     7: 
+     8: 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+     9:     
+    10: 		= csrf_meta_tags
+    11:   
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml___879313644_94969260'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (56.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (117.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-05-26 10:16:07 +0200
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 1.0ms)
