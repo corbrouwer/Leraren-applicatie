@@ -10,7 +10,7 @@ class Admin::ChaptersController < ApplicationController
 	def create
 		chapter = Chapter.new(chapter_params)
 		chapter.save
-		redirect_to chapters_path
+		redirect_to admin_chapters_path
 	end
 	def edit
 		@chapter = Chapter.find(params[:id])
@@ -18,12 +18,12 @@ class Admin::ChaptersController < ApplicationController
 	def update
 		@chapter = Chapter.find(params[:id])
 		@chapter.update(chapter_params)
-		redirect_to chapters_path
+		redirect_to admin_chapters_path
 	end
 	def destroy
 		@chapter = Chapter.find(params[:id])
 		@chapter.destroy
-		redirect_to chapters_path
+		redirect_to admin_chapters_path
 	end
 	private
 		def chapter_params

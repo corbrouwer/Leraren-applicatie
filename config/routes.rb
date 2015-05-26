@@ -2,8 +2,14 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :questions
-  resources :chapters
-  get '/admin/chapters'
+
+  namespace :admin do
+    root to: "admin/chapters#index"
+    resources :chapters
+    resources :questions
+  end
+
+
   #resources :questions, path: '/admin/questions'
   #resources :chapters, path: '/admin/chapters'
 
