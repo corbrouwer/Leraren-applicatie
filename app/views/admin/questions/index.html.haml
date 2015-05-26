@@ -1,0 +1,16 @@
+%h1 Ask your questions here!
+
+= link_to 'Nieuwe vraag', new_question_path, class: 'btn btn-primary'
+.panel.panel-default
+	.panel-heading Alle vragen
+	%table.table.table-striped
+		%tr
+			%td ID
+			%td Vraag
+			%td Details
+
+		- @question.each do |question|
+			%tr 
+				%td= question.id
+				%td= question.question
+				%td= link_to 'Show', question_path(question), class: 'btn btn-success'
