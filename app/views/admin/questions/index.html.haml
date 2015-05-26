@@ -8,9 +8,11 @@
 			%td ID
 			%td Vraag
 			%td Details
+			%td Edit
 
 		- @question.each do |question|
 			%tr 
 				%td= question.id
 				%td= question.question
 				%td= link_to 'Show', admin_question_path(question), class: 'btn btn-success'
+				%td= link_to 'Wijzig', edit_admin_question_path(question), class: 'btn btn-warning'

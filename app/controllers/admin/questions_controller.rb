@@ -14,8 +14,7 @@ class Admin::QuestionsController < ApplicationController
 	end
 
 	def edit
-		@question = Question.update
-		@question.save
+		@question = Question.find(params[:id])
 	end
 
 	def show
