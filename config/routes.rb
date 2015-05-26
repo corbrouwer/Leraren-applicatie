@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :questions
-
+  resources :chapters
   namespace :admin do
     root to: "admin/chapters#index"
     resources :chapters
