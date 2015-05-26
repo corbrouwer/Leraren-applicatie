@@ -9,3 +9,7 @@
 		%td= @question.updated_at
 	%tr
 		%td= link_to 'Overzicht', admin_questions_path, class: 'btn btn-success'
+	%tr
+		%td= link_to 'Wijzig', edit_admin_question_path, class: 'btn btn-warning'
+	%tr
+		%td= link_to 'Verwijderen', admin_question_path, method: :delete, data:{confirm: "Weet je het zeker?"}, class: 'btn btn-danger'
