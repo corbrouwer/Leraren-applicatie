@@ -8435,3 +8435,86 @@ ActionController::RoutingError (uninitialized constant Admin::Admin):
   Rendered /Users/Erwin/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/Erwin/.rvm/gems/ruby-2.1.3/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (45.3ms)
 >>>>>>> Stashed changes
+
+
+Started GET "/" for ::1 at 2015-05-26 13:25:37 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 337ms (Views: 324.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/questions" for ::1 at 2015-05-26 13:25:41 +0200
+Processing by Admin::QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"
+  Rendered admin/questions/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 117ms (Views: 115.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/questions/6/edit" for ::1 at 2015-05-26 13:25:59 +0200
+Processing by Admin::QuestionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered admin/questions/_form.html.haml (8.8ms)
+  Rendered admin/questions/edit.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 121ms (Views: 110.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/questions/6" for ::1 at 2015-05-26 13:26:07 +0200
+Processing by Admin::QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"09SNTbazEztJxG+UTgd7hZZpc4nvppqh3kg+ReMyIYg82pKBBk05EA50p55Mm3lwKsNDTepEBAovsXsla2rXTg==", "question"=>{"question"=>"Wat is je favoriete fruit?"}, "commit"=>"Opslaan", "id"=>"6"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "questions" SET "question" = ?, "updated_at" = ? WHERE "questions"."id" = ?  [["question", "Wat is je favoriete fruit?"], ["updated_at", "2015-05-26 11:26:07.659799"], ["id", 6]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/questions/6
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/questions/6" for ::1 at 2015-05-26 13:26:07 +0200
+Processing by Admin::QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered admin/questions/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/questions" for ::1 at 2015-05-26 13:26:17 +0200
+Processing by Admin::QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered admin/questions/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 152ms (Views: 151.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/questions/5/edit" for ::1 at 2015-05-26 13:26:55 +0200
+Processing by Admin::QuestionsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered admin/questions/_form.html.haml (1.3ms)
+  Rendered admin/questions/edit.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/questions/5" for ::1 at 2015-05-26 13:26:57 +0200
+Processing by Admin::QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7H+B/1cwMXoTDkILWmlmWR8WZ4nmOJNpiSnC2+Zi9sEDcZ4z584bUVS+igFY9WSso7xXTePaDcJ40Ie7bjoABw==", "question"=>{"question"=>"Wat is de zin van het leven?"}, "commit"=>"Opslaan", "id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/questions/5
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/questions/5" for ::1 at 2015-05-26 13:26:57 +0200
+Processing by Admin::QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered admin/questions/show.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 111ms (Views: 108.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/questions" for ::1 at 2015-05-26 13:27:08 +0200
+Processing by Admin::QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  Rendered admin/questions/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 113ms (Views: 112.7ms | ActiveRecord: 0.2ms)
