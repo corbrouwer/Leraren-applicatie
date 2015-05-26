@@ -3763,3 +3763,149 @@ Processing by ChaptersController#index as HTML
   [1m[36mChapter Load (0.0ms)[0m  [1mSELECT "chapters".* FROM "chapters"[0m
   Rendered chapters/index.html.haml within layouts/application (2.0ms)
 Completed 200 OK in 234ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chapters/new" for ::1 at 2015-05-22 15:56:17 +0200
+Processing by ChaptersController#new as HTML
+  Rendered chapters/_form.html.haml (1.0ms)
+  Rendered chapters/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 237ms (Views: 235.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chapters" for ::1 at 2015-05-22 15:56:34 +0200
+Processing by ChaptersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uzsC4fF2XARm73sxVi001Wlmxcx9gCJOV0d/Mx888zYD43XFFNAELmSp+LGtED/tDNMM/SrhtQKWiR1zH5K8uw==", "chapter"=>{"chapter"=>"transsexueel"}, "commit"=>"Opslaan"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "chapters" ("chapter", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["chapter", "transsexueel"], ["created_at", "2015-05-22 13:56:34.793775"], ["updated_at", "2015-05-22 13:56:34.793775"]]
+  [1m[35m (24.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/chapters
+Completed 302 Found in 34ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-22 15:56:34 +0200
+Processing by ChaptersController#index as HTML
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT "chapters".* FROM "chapters"[0m
+  Rendered chapters/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 238ms (Views: 238.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chapters/3/edit" for ::1 at 2015-05-22 15:56:39 +0200
+Processing by ChaptersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChapter Load (0.0ms)[0m  SELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered chapters/_form.html.haml (1.0ms)
+  Rendered chapters/edit.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 238ms (Views: 236.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/chapters/3" for ::1 at 2015-05-22 15:56:52 +0200
+Processing by ChaptersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2B9Jxz7+W5ynbiMarQRwtxlDXF0/3210KcVORppKyOLuAoD+V2hRHDbOwyRiRr6udDEQCOe6vkRaXd5Gsdkrg==", "chapter"=>{"chapter"=>"hoi"}, "commit"=>"Opslaan", "id"=>"3"}
+  [1m[36mChapter Load (1.0ms)[0m  [1mSELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "chapters" SET "chapter" = ?, "updated_at" = ? WHERE "chapters"."id" = ?[0m  [["chapter", "hoi"], ["updated_at", "2015-05-22 13:56:52.081764"], ["id", 3]]
+  [1m[35m (17.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/chapters
+Completed 302 Found in 25ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-22 15:56:52 +0200
+Processing by ChaptersController#index as HTML
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT "chapters".* FROM "chapters"[0m
+  Rendered chapters/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 250ms (Views: 249.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chapters/3/edit" for ::1 at 2015-05-22 15:56:55 +0200
+Processing by ChaptersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChapter Load (0.0ms)[0m  SELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered chapters/_form.html.haml (1.0ms)
+  Rendered chapters/edit.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 245ms (Views: 243.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/chapters/3" for ::1 at 2015-05-22 15:57:01 +0200
+Processing by ChaptersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HguWJ2ulvOa7oLH3rs6v9U4+roP1FlE7Yf/622JolO+m0+EDjgPkzLnmMndV86TNK4tnsqJ3xnegMZibYsbbYg==", "chapter"=>{"chapter"=>"2. mooi man"}, "commit"=>"Opslaan", "id"=>"3"}
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "chapters" SET "chapter" = ?, "updated_at" = ? WHERE "chapters"."id" = ?[0m  [["chapter", "2. mooi man"], ["updated_at", "2015-05-22 13:57:01.647311"], ["id", 3]]
+  [1m[35m (10.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/chapters
+Completed 302 Found in 18ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-22 15:57:01 +0200
+Processing by ChaptersController#index as HTML
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT "chapters".* FROM "chapters"[0m
+  Rendered chapters/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 281ms (Views: 280.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chapters/3/edit" for ::1 at 2015-05-22 15:57:03 +0200
+Processing by ChaptersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChapter Load (1.0ms)[0m  SELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered chapters/_form.html.haml (1.0ms)
+  Rendered chapters/edit.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 239ms (Views: 237.0ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/chapters/3" for ::1 at 2015-05-22 15:57:05 +0200
+Processing by ChaptersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dmjg0SdkuVI/+okXTUFfnJ2MKBar8GCUYv/6UYFIqeu2sJf1wsLheD28Cpe2fFSk+DnhJ/yR99ijMZgRgebmZg==", "chapter"=>{"chapter"=>"2. mooi man"}, "commit"=>"Opslaan", "id"=>"3"}
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/chapters
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-22 15:57:05 +0200
+Processing by ChaptersController#index as HTML
+  [1m[35mChapter Load (0.0ms)[0m  SELECT "chapters".* FROM "chapters"
+  Rendered chapters/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 244ms (Views: 244.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/chapters/3" for ::1 at 2015-05-22 15:57:12 +0200
+Processing by ChaptersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j4v7g/1M1P4PP/0omYt+AFf45/qgudOC5YKA1x52J0I3U4ynGOqM1A15fqhitnU4Mk0uy/fYRM4kTOKXHthozw==", "id"=>"3"}
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT  "chapters".* FROM "chapters" WHERE "chapters"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "chapters" WHERE "chapters"."id" = ?[0m  [["id", 3]]
+  [1m[35m (10.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/chapters
+Completed 302 Found in 19ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-22 15:57:12 +0200
+Processing by ChaptersController#index as HTML
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT "chapters".* FROM "chapters"[0m
+  Rendered chapters/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 241ms (Views: 241.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chapters/new" for ::1 at 2015-05-22 15:57:21 +0200
+Processing by ChaptersController#new as HTML
+  Rendered chapters/_form.html.haml (2.0ms)
+  Rendered chapters/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 236ms (Views: 235.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chapters" for ::1 at 2015-05-22 15:57:24 +0200
+Processing by ChaptersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pzrc/h2QX96cHWDw/6O/cDWaI0z8g3wK4WyKL/5PYV+H4qva+DYH9J5b43AEnrRIUC/qfavi60Ygouhv/uEu0g==", "chapter"=>{"chapter"=>"2. hoi"}, "commit"=>"Opslaan"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "chapters" ("chapter", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["chapter", "2. hoi"], ["created_at", "2015-05-22 13:57:24.874640"], ["updated_at", "2015-05-22 13:57:24.874640"]]
+  [1m[35m (21.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/chapters
+Completed 302 Found in 31ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/chapters" for ::1 at 2015-05-22 15:57:24 +0200
+Processing by ChaptersController#index as HTML
+  [1m[36mChapter Load (0.0ms)[0m  [1mSELECT "chapters".* FROM "chapters"[0m
+  Rendered chapters/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 283ms (Views: 282.0ms | ActiveRecord: 0.0ms)
